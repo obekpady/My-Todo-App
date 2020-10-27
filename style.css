@@ -1,6 +1,7 @@
 .main-header{
     font-size: 70px;
     margin-bottom: 70px;
+    text-align: center;
 }
 
 *{
@@ -11,13 +12,13 @@
 .container {
 display: flex;
 flex-direction: column;
-align-items: center;
 width: 70vw;
 }
 .empty-state__title,
 .empty-state__description {
-    margin-bottom: 20;
+    margin-bottom: 20px;
 }
+
 .empty-state {
 flex-direction: column;
 align-items: center;
@@ -29,7 +30,7 @@ form {
     display: flex;
     justify-content: space-between;
 }
-input {
+input[type="text"]{
     width: 100%;
     padding: 10px;
     border-radius: 4px;
@@ -49,7 +50,7 @@ input {
 .todo-item span{
     flex-grow: 1;
     margin-left: 10px;
-    font-size: 22;
+    font-size: 22px;
 }
 .done span{
     text-decoration: line-through;
@@ -68,7 +69,7 @@ input[type="checkbox"]{
     cursor: pointer;
 }
 .tick::before{
-    content: "*";
+    content: "✔";
     font-size: 20px;
     display: none;
 }
@@ -87,5 +88,12 @@ input[type="checkbox"]{
     width: 30px;
     height: 30px;
     pointer-events: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.todo-list:empty + .empty-state{
+    display: flex;
 }
 
